@@ -1,0 +1,485 @@
+/* Largura máxima das imagens */
+img {
+	max-width: 100%;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* VERIFICAR SE AINDA PRECISA DISSO AQUI */
+
+
+/* -------------------------------------------*/
+/* --------->>> Seleção de Texto <<----------*/
+/* -----------------------------------------*/
+
+/* Firefox */
+::-moz-selection {
+	background: var(--ng-1);
+	color: #000;
+}
+
+/* Geral */
+::selection {
+	background: var(--ng-1);
+	color: #000;
+}
+
+
+
+/* -------------------------------------------*/
+/* --------->>> Barra de Rolagem <<----------*/
+/* -----------------------------------------*/
+
+/* ---- WebKit (Chrome) ---- */
+
+/* Largura */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Fundo */
+::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background-color: #000;
+}
+
+/* Indicador */
+::-webkit-scrollbar-thumb {
+	background-color: var(--ng-2);
+	border-radius: 5px;
+}
+
+/* ---- Mozilla (Firefox) ---- */
+
+/* Largura */
+::-moz-scrollbar {
+	width: 10px;
+}
+
+/* Fundo */
+::-moz-scrollbar-track {
+	background-color: #000;
+}
+
+/* Indicador */
+::-moz-scrollbar-thumb {
+	background-color: var(--ng-2);
+	border-radius: 5px;
+}
+
+
+
+/* -------------------------------------------*/
+/* -------->>> Adaptar resolução <<<---------*/
+/* -----------------------------------------*/
+
+@media only screen and (max-width: 991px) {
+
+	.section-title {
+		padding-bottom: 10px;
+		margin-bottom: 60px;
+	}
+
+	.section-title:after {
+		width: 48px;
+		margin-left: -24px;
+		border-width: 8px;
+	}
+
+}
+
+
+
+/* -------------------------------------------*/
+/* --------->>> Navigation Bar <<<-----------*/
+/* -----------------------------------------*/
+
+/* Espaço entre a página e o header */
+header.header {
+	padding-bottom: 3rem;
+}
+
+/* Fundo da navbar */
+header .navbar {
+	padding: 0;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 40;
+	transition: all 0.3s;
+}
+
+/* Logo Escrita (parte branca) */
+.navbar-brand h1 {
+	font-family: var(--font-2);
+	font-weight: normal;
+	transition: all 0.3s;
+	color: #fff;
+	margin: 0;
+}
+
+/* Logo Escrita (parte verde) */
+.navbar-brand h1 span {
+	color: var(--ng-2);
+}
+
+header .navbar-collapse.collapse {
+	-webkit-box-pack: end;
+	-moz-box-pack: end;
+	justify-content: flex-end;
+}
+
+.navbar .navbar-nav .nav-item {
+	padding: 40px 6px 36px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+}
+
+/* Links inativo */
+.navbar .navbar-nav .nav-link {
+	padding: 4px 10px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #fff;
+	border-radius: 4px;
+	font-family: var(--font-1);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	transition: all 0.3s;
+}
+
+/* Link ativo (de acordo com a parte da página) */
+.navbar .navbar-nav .nav-link.active {
+	background: none;
+	color: var(--ng-2);
+}
+
+/* Hover do link inativo */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+	color: var(--ng-2);
+}
+
+/* Hover do link ativo */
+.navbar .navbar-nav .nav-link.active:hover,
+.navbar .navbar-nav .nav-link.active:focus {
+	color: #fff;
+}
+
+/* Fundo Navbar durante o Scroll */
+header .navbar.navbar-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.9);
+}
+
+/* Espaçamento da Navbar durante o scroll */
+.navbar-fixed .navbar-nav .nav-item {
+	padding: 23px 6px;
+}
+
+
+
+/* -------------------------------------------*/
+/* -------->>> Navbar no mobile <<<----------*/
+/* -----------------------------------------*/
+
+/* Posição do Botão */
+.navbar-toggle {
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+/* Espaçamento do Botão */
+.navbar-toggle .slicknav_btn {
+	background: none;
+	border: none;
+	border-radius: 0;
+}
+
+/* Espaçamento do Ícone */
+.navbar-toggle .slicknav_icon-bar {
+	background: none;
+	box-shadow: none;
+	height: 1px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+}
+
+/* Ícone*/
+.slicknav_icon:before {
+	background: transparent;
+	width: 1.125em;
+	height: 0.875em;
+	display: block;
+	color: #fff;
+	font-size: 25px;
+	font-family: 'FontAwesome';
+	content: '\f0c9';
+	position: absolute;
+}
+
+/* Botão */
+.slicknav_btn {
+	margin: 5px 5px 6px;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #222;
+}
+
+/* Menu que desce */
+.slicknav_menu {
+	padding: 0;
+	background: #000000b0;
+}
+
+/* Opções */
+.slicknav_nav a {
+	color: #fff;
+	padding: 8px 0;
+	text-transform: uppercase;
+	font-family: var(--font-1);
+}
+
+/* Hover das opções */
+.slicknav_nav a:hover {
+	background: none;
+	color: var(--ng-2);
+}
+
+
+
+/* -------------------------------------------*/
+/* -------->>> Adaptar resolução <<<---------*/
+/* -----------------------------------------*/
+
+@media only screen and (max-width: 991px) {
+	.header .navbar-nav {
+		display: none;
+	}
+
+	.header .navbar {
+		align-items: flex-start;
+	}
+
+	.navbar-brand {
+		padding: 13px 0;
+	}
+
+	.header .navbar .container {
+		position: relative;
+		flex-wrap: wrap;
+	}
+
+	.header .navbar-toggle,
+	#responsive-menu {
+		display: block;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+
+	.header .container {
+		width: 100%;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+}
+
+
+
+/* -------------------------------------------*/
+/* ------>>> Galeria de Screenshots <<<------*/
+/* -----------------------------------------*/
+
+/* Espaço da galeria */
+.print-gallery {
+	padding-top: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/* Substituir espaço do bootstrap */
+.print-gallery .row>div {
+	padding: 2px;
+}
+
+/* Imagens */
+.print-gallery .lightbox img {
+	width: 100%;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: var(--shadow-2);
+}
+
+/* Aparecer lupa no Hover */
+.print-gallery .lightbox:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	opacity: 0;
+	color: #fff;
+	font-size: 26px;
+	font-family: 'FontAwesome';
+	content: '\f002';
+	/* Ícone da Lupa */
+	pointer-events: none;
+	z-index: 9000;
+	transition: 0.4s;
+}
+
+/* Efeito de cor do Hover */
+.print-gallery .lightbox:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: var(--ng-4);
+	content: '';
+	transition: 0.4s;
+	border-radius: 10px;
+}
+
+/* Opacidade do Hover */
+.print-gallery .lightbox:hover:after,
+.print-gallery .lightbox:hover:before {
+	opacity: 1;
+}
+
+/* Fundo dos botões de passar e fechar */
+.baguetteBox-button {
+	background-color: transparent !important;
+	outline: none !important;
+}
+
+/* Ajustar para celular */
+@media(max-width: 768px) {
+	body {
+		padding: 0;
+	}
+}
+
+
+
+/* -------------------------------------------*/
+/* ------------->>> Footer <<<---------------*/
+/* -----------------------------------------*/
+
+/* Geral */
+.footer {
+	padding: 40px 0;
+	background: transparent;
+}
+
+/* Espaço dos Ícones */
+.footer-icons {
+	margin-bottom: 20px;
+}
+
+/* Ícones */
+.footer-icons a {
+	display: inline-block;
+	font-size: 30px;
+	color: #fff;
+	margin-right: 20px;
+	transition: all 0.3s;
+}
+
+/* Ícones Hover */
+.footer-icons a:hover {
+	color: var(--ng-3);
+}
+
+.footer-warn p:last-child {
+	margin-bottom: 0;
+}
+
+/* Logo da Fansub */
+.footer-logo {
+	text-align: right;
+	margin-bottom: 30px;
+}
+
+/* Descrição da Fansub */
+.footer-desc {
+	text-align: right;
+}
+
+.footer-desc p {
+	margin: 0;
+}
+
+
+/* Adaptar Resolução */
+@media only screen and (max-width: 767px) {
+
+	.footer-icons {
+		text-align: center;
+	}
+
+	.footer-icons a {
+		margin: 0 6px;
+	}
+
+	.footer-warn {
+		text-align: justify;
+		margin-bottom: 30px;
+	}
+
+	.footer-desc,
+	.footer-logo {
+		text-align: center;
+	}
+}
+
+
+
+/* ------------------------------------------------*/
+/* ---------->>> Variáveis Globais <<<------------*/
+/* ----------------------------------------------*/
+
+:root {
+
+	/* Degradê */
+	--bg-gradient-jet: linear-gradient(to bottom right,
+			hsla(240, 1%, 18%, 0.251) 0%,
+			hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+	--border-gradient-onyx: linear-gradient(to bottom right,
+			hsl(0, 0%, 25%) 0%,
+			hsla(0, 0%, 25%, 0) 50%);
+	--text-gradient-green: linear-gradient(to right,
+			#1D976C,
+			#93F9B9);
+
+
+	/* ---- Cores ---- */
+	/* Tons de Preto/cinza */
+	--jet: #383838;
+	--onyx: #2b2b2c;
+	--eerie-black-2: #1e1e1f;
+	--smoky-black: #121212;
+
+	/* Tons de verde */
+	--ng-1: #4ceb95;
+	--ng-2: #09db92;
+	--ng-3: #18d26e;
+	--ng-4: #18d26fb2;
+
+	/* Sombra */
+	--shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+	
+	/* Fontes */
+	--font-1: 'Poppins', sans-serif;
+	--font-2: 'Tiro Devanagari Hindi', serif;
+	--font-3: 'Open Sans', sans-serif;
+}
