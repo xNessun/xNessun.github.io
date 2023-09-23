@@ -62,6 +62,7 @@
       <!-- Nome e desc -->
       <h1>Sobre <span>mim:</span></h1>
       <p>Animes favoritos: <span id="typed"></span></p>
+      <p>Jogos favoritos: <span id="games"></span></p>
       <p>Eu sou um adolescente viciado em animes, jogos e música e estudo bastante programação. Prazer em te conhecer!</p>
 
 
@@ -87,6 +88,25 @@
         'K-On!',
         'Bleach',
         'Lain',
+      ],
+      typeSpeed: 60,
+      startDelay: 100,
+      backSpeed: 40,
+      backDelay: 3000,
+      smartBackspace: false,
+      shuffle: true,
+      loop: true,
+      loopCount: Infinity,
+      cursorChar: '▎'
+
+    var games = new Typed('#games', {
+      strings: [
+        'Minecraft',
+        'Persona',
+        'Sonic',
+        'Metal Gear',
+        'Phantasy Star',
+        'Dark Souls',
       ],
       typeSpeed: 60,
       startDelay: 100,
